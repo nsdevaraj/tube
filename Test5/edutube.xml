@@ -1,0 +1,61 @@
+<Subjects>
+	<Subject name='Maths'>
+		<Topic code="FD0EB975BA0CC1E0" name="Linear Algebra" />
+		<Topic code="19E79A0638C8D449" name="Calculus" />
+		<Topic code="50D1D09ABE9CE271" name="Developmental Math" />
+		<Topic code="1C68557896CFABA8" name="Developmental Math 2" />
+		<Topic code="96AE8D9C68FEB902" name="Differential Equations" />
+		<Topic code="26812DF9846578C3" name="Geometry" />
+		<Topic code="C58778F28211FA19" name="Probability" />
+		<Topic code="1328115D3D8A2566" name="Statistics" />
+		<Topic code="E88E3C9C7791BD2D" name="Precalculus" />
+		<Topic code="7AF1C14AF1B05894" name="Algebra" />
+		<Topic code="238F98B2C6422A95" name="Pre-algebra" />
+		<Topic code="301908982CBFE20D" name="Arithmetic" />
+		<Topic code="D6DA74C1DBF770E7" name="Trigonometry" />
+		<Topic code="AD5B880806EBE0A4" name="Physics" />
+	</Subject>
+	<Subject name='Science'>
+		<Topic code="7A9646BC5110CF64" name="Biology" />
+		<Topic code="166048DD75B05C0D" name="Chemistry" />
+		<Topic code="36E7A2B75028A3D6" name="Computer Science" />
+		<Topic code="7305D1BC80498DA6" name="Organic Chemistry" />
+	</Subject>
+	<Subject name='TED'>
+		<Topic code="9133CCF626BB069C" name="TED Talks 1" TED="true"/>
+		<Topic code="98DD142D78036421" name="TED Talks 2" TED="true"/>
+		<Topic code="A7C278E8D9D22E59" name="TED Talks 3" TED="true"/>
+		<Topic code="AC463A2B6B2CEC7F" name="TED Talks 4" TED="true"/>
+		<Topic code="9DD399805F715133" name="TED Talks 5" TED="true"/>
+		<Topic code="TEDtalksDirector" name="TED Talks" YTTV="true" />
+        <Topic code="TechCrunch%20TV" name="TechCrunch" YTTV="true" />
+        <Topic code="NASA%20TV" name="TechCrunch" YTTV="true" />
+	</Subject>
+	<Subject name='Other'>
+		<Topic code="CECDA315A8848B99" name="Banking and Money" />
+		<Topic code="BE233FA3D593154E" name="Paulson Bailout" />
+		<Topic code="9ECA8AEB409B3E4F" name="Finance" />
+		<Topic code="370CD04C45C6BB81" name="Valuation and Investing" />
+		<Topic code="3C1664BF6E9E3C8F" name="Current Economics" />
+		<Topic code="945E4F0ED131E4D1" name="Credit Crisis" />
+		<Topic code="D2DC08AECFD90850" name="Currency" />
+		<Topic code="CADCB4565CFACEBF" name="Venture Capital and Capital Markets" />
+		<Topic code="4EF8BA0ADAAA1B05" name="Geithner Plan" />
+		<Topic code="2186CFB2CE12A8B5" name="Cosmology and Astronomy" />
+		<Topic code="AC6B9F15C835224C" name="History" />
+	</Subject>
+	<Subject name='Test Prep'>
+		<Topic code="8956F31CD4DDA9FA" name="ck12.org Algebra 1 Examples" />
+		<Topic code="31AED425C1B489F6" name="SAT Preparation" />
+		<Topic code="FE3A143757536D07" name="California Standards Test: Geometry" />
+		<Topic code="DF7228D0F377BD07" name="California Standards Test: Algebra I" />
+		<Topic code="44D72BB7BED3A172" name="CAHSEE Example Problems" />
+		<Topic code="4DD9C4B87E960720" name="Brain Teasers" />
+		<Topic code="3EF88D8D529A562E" name="GMAT: Problem Solving" />
+		<Topic code="A1B5F09DE551ECD5" name="IIT JEE Questions" />
+		<Topic code="9DAFA5380375E44A" name="California Standards Test: Algebra II" />
+		<Topic code="CBA57C878A4A52D8" name="GMAT Data Sufficiency" />
+		<Topic code="3128E15B8D159842" name="Algebra I Worked Examples" />
+		<Topic code="6C6E2833B19F17AE" name="MA Tests for Education Licensure (MTEL) -Pre-Alg" />
+	</Subject>
+</Subjects>

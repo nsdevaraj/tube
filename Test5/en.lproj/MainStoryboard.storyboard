@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="9Tv-J2-c1f">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9IB-yo-R6p">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="ozt-tm-RdM"/>
+                                    <outlet property="delegate" destination="2" id="o8z-fh-bx2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9IB-yo-R6p" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="3Cz-KH-sgy"/>
+                            <constraint firstItem="9IB-yo-R6p" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="UaY-vF-bST"/>
+                            <constraint firstItem="9IB-yo-R6p" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="WPJ-VN-edF"/>
+                            <constraint firstItem="9IB-yo-R6p" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="k6j-kZ-uqp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="Tem-4q-Ddh"/>
+                    <connections>
+                        <outlet property="tabItem" destination="Tem-4q-Ddh" id="wVG-Fu-Vnh"/>
+                        <outlet property="tableView" destination="9IB-yo-R6p" id="2gs-Kz-vEv"/>
+                        <segue destination="N3A-LX-frx" kind="modal" identifier="videolist" modalPresentationStyle="fullScreen" id="x1Z-85-ENs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="-17"/>
+        </scene>
+        <!--Web Controller-->
+        <scene sceneID="NvV-BO-5iA">
+            <objects>
+                <viewController id="3dS-se-sxr" customClass="WebController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="96Q-Qy-OWh">
+                        <rect key="frame" x="0.0" y="20" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar alpha="0.40000000000000013" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="hh3-3n-bm3" userLabel="bar">
+                                <items>
+                                    <navigationItem title="Video" id="I5u-Wk-cOr" userLabel="video">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="Xk1-tI-cI8">
+                                            <connections>
+                                                <action selector="homeBtnPressed:" destination="3dS-se-sxr" id="cyv-Sh-rJX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="back.png" id="ljE-Nf-CTU">
+                                            <connections>
+                                                <action selector="backBtnPressed:" destination="3dS-se-sxr" id="vtZ-cl-Qdn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hh3-3n-bm3" firstAttribute="bottom" secondItem="96Q-Qy-OWh" secondAttribute="bottom" type="default" id="CNf-iE-Dj4"/>
+                            <constraint firstItem="hh3-3n-bm3" firstAttribute="trailing" secondItem="96Q-Qy-OWh" secondAttribute="trailing" type="default" id="gnp-1s-cVv"/>
+                            <constraint firstItem="hh3-3n-bm3" firstAttribute="leading" secondItem="96Q-Qy-OWh" secondAttribute="leading" type="default" id="kKZ-sx-uTm"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backBtn" destination="ljE-Nf-CTU" id="NaL-J9-p6X"/>
+                        <outlet property="homeBtn" destination="Xk1-tI-cI8" id="SFR-20-UhH"/>
+                        <outlet property="viewElement" destination="96Q-Qy-OWh" id="OOp-MB-1mt"/>
+                        <segue destination="N3A-LX-frx" kind="modal" identifier="backList" modalPresentationStyle="fullScreen" id="mds-FX-5ub"/>
+                        <segue destination="9Tv-J2-c1f" kind="modal" identifier="backHome" modalPresentationStyle="fullScreen" id="da3-wO-dy7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igF-E8-5da" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1418" y="1343"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Uzq-CZ-aDH">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="9Tv-J2-c1f" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="deq-X5-1W6">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="jNR-rM-vCd"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="p7A-SA-FbR"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="5H6-Yx-7by"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XyM-Xs-hEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797" y="-25"/>
+        </scene>
+        <!--Video List Controller-->
+        <scene sceneID="fjs-Gb-W1O">
+            <objects>
+                <viewController id="N3A-LX-frx" customClass="VideoListController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uFN-JC-rIK">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hBz-vH-I8a">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="N3A-LX-frx" id="FUr-aL-Ufy"/>
+                                    <outlet property="delegate" destination="N3A-LX-frx" id="Ajo-IQ-vEW"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="h26-2e-e9Y" userLabel="Video">
+                                <items>
+                                    <navigationItem title="Videos List" id="cnp-4y-u89" userLabel="Video">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="back.png" id="X1c-BW-QAD">
+                                            <connections>
+                                                <action selector="backBtnPressed:" destination="N3A-LX-frx" id="MBH-Ub-x6f"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hBz-vH-I8a" firstAttribute="top" secondItem="h26-2e-e9Y" secondAttribute="bottom" type="default" id="aq3-Yw-eU1"/>
+                            <constraint firstItem="h26-2e-e9Y" firstAttribute="leading" secondItem="uFN-JC-rIK" secondAttribute="leading" type="default" id="epb-Mn-riR"/>
+                            <constraint firstItem="hBz-vH-I8a" firstAttribute="bottom" secondItem="uFN-JC-rIK" secondAttribute="bottom" type="default" id="fXP-Hs-LzN"/>
+                            <constraint firstItem="h26-2e-e9Y" firstAttribute="trailing" secondItem="uFN-JC-rIK" secondAttribute="trailing" type="default" id="gY2-AY-0dS"/>
+                            <constraint firstItem="hBz-vH-I8a" firstAttribute="trailing" secondItem="uFN-JC-rIK" secondAttribute="trailing" type="default" id="ngU-1K-AP1"/>
+                            <constraint firstItem="h26-2e-e9Y" firstAttribute="top" secondItem="uFN-JC-rIK" secondAttribute="top" type="default" id="uMX-Ay-Ylg"/>
+                            <constraint firstItem="hBz-vH-I8a" firstAttribute="leading" secondItem="uFN-JC-rIK" secondAttribute="leading" type="default" id="v8U-gR-Eas"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="X1c-BW-QAD" id="naV-DH-n8P"/>
+                        <outlet property="navBarItem" destination="cnp-4y-u89" id="jMv-Do-ljk"/>
+                        <outlet property="videolist" destination="hBz-vH-I8a" id="0HP-wP-VCc"/>
+                        <segue destination="3dS-se-sxr" kind="modal" identifier="web" modalPresentationStyle="fullScreen" id="piJ-mv-kqa"/>
+                        <segue destination="3dS-se-sxr" kind="modal" identifier="video" modalPresentationStyle="fullScreen" id="7iX-D6-pmW"/>
+                        <segue destination="9Tv-J2-c1f" kind="modal" identifier="backtoHome" modalPresentationStyle="fullScreen" id="OGc-nH-ONA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQI-cJ-ITR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2774" y="551"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back.png" width="11" height="11"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="VideoListController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoListController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtnPressed:"/>
+                <relationship kind="outlet" name="backBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="navBarItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="videolist" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabItem" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WebController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtnPressed:"/>
+                <relationship kind="action" name="homeBtnPressed:"/>
+                <relationship kind="outlet" name="backBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="homeBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="padWeb" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="viewElement" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="da3-wO-dy7"/>
+        <segue reference="piJ-mv-kqa"/>
+        <segue reference="mds-FX-5ub"/>
+        <segue reference="p7A-SA-FbR"/>
+    </inferredMetricsTieBreakers>
+</document>
